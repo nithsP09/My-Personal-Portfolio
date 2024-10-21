@@ -1,0 +1,1452 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+   
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    z-index: 1000;
+}
+
+.nav-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.logo span{
+    color: turquoise;
+    text-shadow: 0 0 10px turquoise;
+}
+
+.menu{
+    display: flex;
+    padding-right: 70px;
+}
+
+.menu li{
+    padding-left: 30px;
+}
+
+.menu li a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 450;
+    transition: 0.3s linear;
+}
+
+.menu li a::after{
+    position: absolute;
+    content: "";
+    bottom: -3px; /* down line of the links thickness size */
+    left: 0;
+    width: 0; /* down line of the links width size */ /*(This also remove the down line too) */
+    height: 3px; /* down line of the links height size */
+    background-color: turquoise; /* down line of the links color*/
+    transition: 0.3s linear;
+}
+
+.menu li a:hover::after{
+    width: 100%;
+}
+
+.menu li a:hover{
+    color: turquoise;
+}
+
+.open-menu,
+.close-menu{
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu{
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+
+#home-check{
+    display: none;
+}
+
+#project-check{
+    display: none;
+}
+
+#contact-check{
+    display: none;
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+}
+
+.picture-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.picture-container .image{
+    width: 553px; 
+    /* make note of this*/
+    height: 70vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px turquoise;
+}
+
+.picture-container .image img{
+    width: 100%;
+}
+
+/* The down section thats is the picture-container image hover section, is of animation part  */
+.picture-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+@keyframes animate{
+    0%{
+        scale: 1;
+    }
+
+    50%{
+        scale: 1.05;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+}
+
+.picture-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw,1.8rem);
+    /*font-size: 29px;  (The above mentioned font sie is also the same size of this font size)*/
+}
+
+.content h1 span{
+    color: turquoise;
+    text-shadow: 0 0 10px turquoise;
+}
+.content .typewriter{
+    font-size: 29px;
+    margin: 20px auto;
+}
+
+.content .typewriter-text{
+    color: turquoise;
+    text-shadow: 0 0 10px turquoise;
+    font-weight: 500;
+}
+
+.content p {
+    font-size: 16px; /* or any size you prefer */
+    line-height: 1.6; /* optional, to improve readability */
+    text-align: justify;
+    margin: 15px 0;
+}
+
+.socialLinks {
+    display: flex; /* Enable flexbox layout */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically if needed */
+    margin-top: 20px; 
+}
+
+.socialLinks i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid turquoise;
+    border-radius: 20%; 
+    /* If you need to keep circle icons keep it as border-radius: 50%;  */
+    color: turquoise;
+    margin: 0 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.socialLinks i:hover{
+    scale: 1.3;
+    color: black;
+    background-color: turquoise;
+    filter: drop-shadow(0 0 10px turquoise);
+}
+
+.viewButton {
+    text-align: center; /* Aligns the button to the right */
+    margin-top: 25px;
+}
+
+.download-button {
+    background-color: turquoise; /* Initial button color */
+    color: black; /* Initial text color */
+    border-radius: 20px;
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the button */
+    font-size: 20px; /* Font size */
+    cursor: pointer; /* Cursor change on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.download-button:hover {
+    background-color: black; /* Button color on hover */
+    color: turquoise; /* Text color on hover */
+    border: 2px solid turquoise; 
+    /* border : 2px solid turquoise is given for the boder color, that is the border outline color */
+    box-shadow: 0 0 10px turquoise;
+    /* box-shadow: 0 0 10px turquoise; is given for the shadow of the box color*/
+}
+
+/*********************************************************ABOUT ME SECTION*********************************************************/
+
+#about-section{    /*for the case id we write (#), in case of class we write (.)*/
+    width: 100%;
+    height: auto;
+    padding: 80px 13%;
+    padding-top: 20px;
+    color: white;
+}
+
+.heading {
+    width: 100%;
+    margin-bottom: 20px; /* Reduce the bottom margin */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.heading h2::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: turquoise;
+    margin-top: 10px; /* Reduce the space between heading text and underline */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    color: turquoise;
+    text-shadow: 0 0 10px turquoise;
+}
+
+.heading p {
+    font-size: 25px;
+    margin-top: 30px; /* Reduce the space above the paragraph */
+    margin-bottom: 0; /* Remove space below the paragraph */
+    text-align: justify;
+    padding: 20px;
+    box-shadow: 0 0 50px turquoise;
+    border-radius: 20px;
+}
+
+/*********************************************************SKILL SECTION*********************************************************/
+
+#skill-section {
+    width: 100%;
+    height: auto;
+    padding: 50px 13%; /* Reduce padding to bring sections closer */
+    padding-top: 0; /* Eliminate the top padding of the skill section */
+    color: white;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 50px; /* Adjust this as needed */ /*This section is to set a space between the line and the contents inside the box*/
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+/*
+.header h2,
+.header span{
+    color: turquoise;
+    text-shadow: 0 0 10px turquoise;
+}
+*/
+.header span{
+    color: turquoise;
+    text-shadow: 0 0 10px turquoise;
+}
+/*
+.header p{
+    text-align: center;  Centers the text 
+    color: white; Optional: Text color 
+    position: relative; Makes sure the ::after element is positioned relative to the paragraph 
+    margin-bottom: 20px; Adds space between paragraph and any following content 
+}*/
+
+.header::after{
+    content: ''; /* Adds the line */
+    display: block;
+    width: 350px; /* Adjust this to control the line length */
+    height: 3px; /* Line thickness */
+    background-color: turquoise; /* Line color */
+    margin: 10px auto 0; /* Centers the line and adds space above it */
+}
+/*
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+/*This is the separtion of one content on left and other on left*/
+    /*padding: 20px; /* Add padding to give space between the shadow and the skills */
+    /*box-shadow: 0 0 50px turquoise; /* Apply box shadow to the container */
+    /*border-radius: 10px;
+}*/
+
+
+.skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    position: relative;
+    padding: 20px; /* Adding padding for the container */
+    margin-bottom: 20px;
+}
+
+/* Apply box shadows to the left and right columns using pseudo-elements */
+.skill-main::before,
+.skill-main::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: calc(45%); /* Adjusted to fit the columns */
+    height: calc(100% - 20px); /* Adjusted height to include padding */
+    box-shadow: 0 0 28px turquoise;   
+    border-radius: 15px;
+    padding: 20px; /* Padding inside the box shadow */
+}
+
+.skill-main::before {
+    left: 0; /* Left side box shadow */
+}
+
+.skill-main::after {
+    right: 0; /* Right side box shadow */
+}
+
+/* Ensuring the skills and bars are inside the boxes and not congested */
+.skill-bar {
+    width: 90%; /* Reduced width to give more space inside */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+    background-color: turquoise;
+}
+
+.skill-main .skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    /*justify content and padding separates the content according and also according the classes too*/
+    margin: 0; 
+}
+
+.skill-bar .info .percentage{
+    font-weight: 550;
+    color: black;
+    padding: 1px 4px;
+    border-radius: 20px;
+    background: turquoise;
+    z-index: 1;
+}
+
+.skill-bar .bar{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background-color: gray;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
+.skill-bar .bar span{
+    width: 50%;;
+    height: 100%;
+    position: absolute;
+    background-color: turquoise;
+    border-radius: 25px;
+}
+
+.skill-bar .bar .ManualTesting{
+    width: 80%;
+    animation: ManualTesting 3s;
+}
+@keyframes ManualTesting{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+.skill-bar .bar .SQLServer{
+    width: 70%;
+    animation: SQLServer 3s;
+}
+@keyframes SQLServer{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+.skill-bar .bar .Java{
+    width: 50%;
+    animation: Java 3s;
+}
+@keyframes Java{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 50%;
+    }
+}
+.skill-bar .bar .MSExcel{
+    width: 75%;
+    animation: MSExcel 3s;
+}
+@keyframes MSExcel{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 75%;
+    }
+}
+.skill-bar .bar .Selenium{
+    width: 70%;
+    animation: Selenium 3s;
+}
+@keyframes Selenium{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+.skill-bar .bar .TestNG{
+    width: 70%;
+    animation: TestNG 3s;
+}
+@keyframes TestNG{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+.skill-bar .bar .Maven{
+    width: 70%;
+    animation: Maven 3s;
+}
+@keyframes Maven{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+.skill-bar .bar .Communication{
+    width: 90%;
+    animation: Communication 3s;
+}
+
+@keyframes Communication{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+/*********************************************************EDUCATION SECTION*********************************************************/
+
+.main{
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 50px 0; /*This padding is to adjust the space between the sections */
+    display: grid;
+    place-items: center;
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.main .head{
+    width: 100%;
+    margin-bottom: 70px; /* Reduce the bottom margin */ /*This section is to set a gap or space between the line and the education details*/
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.head::after {
+    content: "";
+    display: block;
+    width: 350px;
+    height: 3px;
+    background-color: turquoise;
+    margin-top: 10px; /* Reduce the space between heading text and underline */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.container{
+    width: 70%;
+    height: auto;
+    position: relative;
+}
+    
+.container ul{
+    list-style: none;
+}
+
+.container ul::after{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: turquoise;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.container ul li{
+    width: 50%;
+    height: auto;
+    padding: 15px 20px;
+    background-color: black;
+    box-shadow: 0 0 50px turquoise;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    z-index: 99;
+    position: relative;
+}
+/*this section is for the zig zag responsive timeline nth-child(odd), nth-child(even) */
+.container ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    text-align: right; /*Either you can set it as right or left, depends upon*/
+}
+
+/* This is for the dateOne and dateTwo to keep it in the right side. Either this way you can add it. Or directly makes changes in ul li .dateOne and ul li .dateThree
+.container ul li:nth-child(odd) .dateOne,
+.container ul li:nth-child(odd) .dateThree{
+    right: 20px;
+}*/
+
+.container ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.container ul li:nth-child(4){
+    margin-bottom: 0;
+}
+
+.container ul li .title{
+    font-size: 21px;
+    color: turquoise;
+}
+
+ul li p{
+    font-size: 17px;
+    margin: 7px 0;
+    line-height: 30px;
+}
+
+.one, 
+.three{
+    text-align: right;
+}
+
+.two, 
+.five{
+    text-align: left;
+}
+/*
+ul li .date{
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    width: 230px;
+    border-radius: 20px;
+    color: black;
+    background-color: turquoise;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+}*/
+
+ul li .dateOne{
+    position: absolute;
+    top: -40px;
+    /*left: 2px;*/
+    right: 2px;
+    width: 250px;
+    border-radius: 20px;
+    color: black;
+    background-color: turquoise;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight : 600;
+}
+
+ul li .dateTwo{
+    position: absolute;
+    top: -40px;
+    left: 2px;
+    width: 223px;
+    border-radius: 20px;
+    color: black;
+    background-color: turquoise;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight : 600;
+}
+
+ul li .dateThree{
+    position: absolute;
+    top: -40px;
+    /*left: 2px;*/
+    right: 2px;
+    width: 210px;
+    border-radius: 20px;
+    color: black;
+    background-color: turquoise;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight : 600;
+}
+
+ul li .dateFour{
+    position: absolute;
+    top: -40px;
+    left: 2px;
+    width: 210px;
+    border-radius: 20px;
+    color: black;
+    background-color: turquoise;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight : 600;
+}
+
+.container ul li .circle{
+    width: 30px;
+    height: 30px;
+    background-color: turquoise;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+}
+
+.container ul li .circle::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container ul li:nth-child(odd) .circle{
+    right: -30px;
+    transform: translate(50%, -50%);
+}
+
+.container ul li:nth-child(even) .circle{
+    left: -30px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/*********************************************************PROJECT SECTION*********************************************************/
+
+#project-section {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    margin-bottom: 100%;
+    /*margin-bottom: 1500px; /* Adjust as needed */
+}
+
+.outer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Align project title and content */
+.project-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.project-content {
+    flex: 1;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.project-content h1{
+    font-size: 32px;
+    color: turquoise;
+}
+
+.horizontal-line {
+    width: 100%; /* Full width of the container */
+    height: 2px; /* Height of the line */
+    background-color: white; /* Line color */
+    margin: 10px 0; /* Space around the line */
+    margin-bottom: 30px;
+}
+
+.project-content h2, p, ul, li{
+    text-align: justify;
+    font-size: 19px;
+}
+
+.project-content h2{
+    color: turquoise;
+}
+
+.project-content span{
+    color: turquoise;
+}
+
+.project-content h1, h2, p, ul, li {
+    margin-bottom: 5px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+/* Center the video */
+video {
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacer {
+    height: 50px; /* Space below the video */
+}
+/*********************************************************CONTACT SECTION*********************************************************/
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*margin-top: 30px; can be added if provide "Contact" Title has given*/
+}
+
+.contact .contactInfo{
+    width: 50%;
+    display: flex; /*Spread the content, can be or cannot be added if needed*/
+    flex-direction: column;
+}
+
+.contact .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contact .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background-color: turquoise;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.contact .contactInfo .box .text{
+    /*display: flex;
+    flex-direction: column;*/
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.contact .contactInfo .box .text h3{
+    color: turquoise;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: turquoise;
+}
+
+.contactForm h2{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 500; /*font-size: 30px; font-weight: 500; you can see the difference*/
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center; /*Optional*/
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transform: 0.5s;
+    color: black;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color: black;
+    font-size: 11px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="text"], textarea {
+    background-color: turquoise;
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+/*********************************************************FOOTER SECTION*********************************************************/
+
+.footer-container{
+    width: 100%;
+    padding: 80px 30px 2px; /*padding : 30px(top) 30px(left and right) 2px(bottom)*/
+    color: white;
+}
+
+.footer-header p{
+    text-align: center;
+    font-size: 20px;
+}
+
+.footer-icons{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-icons a{
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: turquoise;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.footer-icons a i{
+    font-size: 17px;
+    color: black;
+}
+
+.footer-icons a:hover{
+    background-color: black;
+    box-shadow: 0 0 10px turquoise;
+}
+
+.footer-icons a:hover i{
+    color: turquoise;
+}
+
+.footer-bottom p{
+    text-align: center;
+    font-size: 16px;
+}
+
+.footer-bottom .fa-solid{
+    color: turquoise;
+}
+
+.footer-bottom span{
+    color: turquoise;
+}
+
+
+/*-----------------------------------------MOBILE RESPONSIVE VIEW----------------------------------------------------------------------------------------------------*/
+
+@media(max-width:884px){
+    .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .menu{
+        list-style: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        padding-left: 40px;
+        right: -100%;
+        z-index: 100;
+        background-color: turquoise;
+        color: black;
+        transition: all 0.2s linear;
+    }
+
+    .menu li{
+        margin-top: 40px;
+    }
+
+    .menu li a{
+        color: black;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .menu li a:hover{
+        color: black;
+    }
+
+    .open-menu, .close-menu{
+        display: block;
+    }
+
+    #home-check:checked ~ .menu{
+        right: 0;
+    }
+
+    #project-check:checked ~ .menu{
+        right: 0;
+    }
+
+    #contact-check:checked ~ .menu{
+        right: 0;
+    }
+
+    .picture-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .picture-container .image{
+        width: 55%; 
+        height: 30%;
+    }
+
+    .picture-container .content{
+        width: 80%;
+    }
+
+    .content h1{
+        margin-top: 1rem;
+        font-size: 20px; /*(The above mentioned font sie is also the same size of this font size)*/
+    
+    }
+
+    .content .typewriter{
+        margin-top: 1rem;
+        font-size: 20px;
+    }
+    
+    .content p {
+        font-size: 10px; /* or any size you prefer */
+        line-height: 1.6; /* optional, to improve readability */
+        margin: 10px 0;
+    }
+
+    .content .typewriter-text{
+        font-size: 18px;
+    }
+
+    .socialLinks {
+        margin-top: 15px; 
+    }
+
+    .socialLinks i{
+        width: 2.5rem;
+        height: 2.4rem;
+        font-size: 1.5rem;
+    }
+
+    .viewButton {
+        text-align: center; /* Keeps the button centered */
+        margin-top: 20px; /* Adjusts top margin for mobile */
+    }
+
+    .download-button {
+        background-color: black;
+        color: turquoise;
+        border: 2px solid turquoise; 
+        /* border : 2px solid turquoise is given for the boder color, that is the border outline color */
+        box-shadow: 0 0 10px turquoise;
+        width: 80%; /* Button width reduced to 80% on mobile */
+        max-width: 300px; /* Limits the button width to 300px */
+        padding: 12px 0; /* Adjust padding for better mobile spacing */
+        font-size: 18px; /* Decreased font size for mobile */
+        border-radius: 15px; /* Adjust border-radius for mobile */
+        margin: 0 auto; /* Centers the button horizontally */
+    }
+
+/*******************************************************ABOUT ME SECTION OF MOBILE RESPONSIVE VIEW*****************************************************/
+
+#about-section {
+    padding: 25px 5%; /* Adjust padding for mobile */
+}
+
+.heading {
+    margin-bottom: 15px; /* Adjust margin for mobile */
+    font-size: 20px;
+}
+
+.heading h2::after {
+    width: 100px; /* Smaller underline for mobile */
+    margin-top: 5px; /* Adjust space for mobile */
+    margin-bottom: 30px; /* Adjust space for mobile */
+}
+
+.heading p {
+    font-size: 17px; /* Smaller font size for mobile */
+    text-align: left;
+    margin-top: 20px; /* Adjust margin for mobile */
+    padding: 15px; /* Less padding for mobile */
+    border-radius: 10px;
+}
+
+/*******************************************************SKILL SECTION OF MOBILE RESPONSIVE VIEW*****************************************************/
+
+    /* Adjust padding for skill section */
+    #skill-section {
+        padding-top: 20px; /* Reduce the top padding even more for mobile */
+        padding-left: 5%;   /* Reduce side padding for a more compact layout */
+        padding-right: 5%;
+    }
+
+    .header {
+        margin-bottom: 50px; /* Reduce the bottom margin for smaller screens */
+        font-size: clamp(1rem, 1rem + 3vw, 1.5rem); /* Adjust the scaling of the font size for mobile */
+    }
+
+    .header h2 {
+        font-size: 2rem; /* Reduce h2 font size for mobile */
+    }
+
+    .header span {
+        font-size: 2rem; /* Adjust span font size for mobile */
+        text-shadow: 0 0 5px turquoise; /* Reduce the text-shadow for clarity */
+    }
+
+    /* .header p {
+        font-size: 1rem; /* Reduce font size of the paragraph */
+        /*margin-bottom: 30px;  Adjust the bottom margin for better spacing */ /*
+    }*/
+
+    .header::after {
+        width: 100px; /* Adjust the width of the line under the paragraph to fit mobile */
+        height: 3px; /* Slightly reduce the line thickness for smaller screens */
+        margin-bottom: 2px;
+    }
+
+    /* Adjust the grid layout for the skills section */
+    .skill-main {
+        grid-template-columns: 1fr; /* One column layout for mobile view */
+        grid-row-gap: 30px; /* Increase the row gap for better spacing */
+        padding: 35px; /* Add padding to give space between the shadow and the skills */
+        box-shadow: 0 0 50px turquoise; /* Apply box shadow to the container */
+        border-radius: 10px;
+    }
+
+    .skill-main::before,
+    .skill-main::after {
+        display: none;
+    }
+  
+    /* Adjust percentage bar width */
+    .skill-bar .info .percentage {
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+        padding: 1px 2px;  /* Adjust padding for a more compact design */
+        border-radius: 10px; /* Reduce the border radius */
+    }
+    /* Keep the same animations and bar widths, no need for changes here */
+    
+    /* Optional: Adjust the height of the skill bars for smaller screens */
+    .skill-bar .bar {
+        height: 8px; /* Slightly reduce bar height */
+    }
+
+/*******************************************************EDUCATION SECTION OF MOBILE RESPONSIVE VIEW*****************************************************/
+
+    .main {
+        padding-top: 1px; 
+        font-size: 20px; /* Reduce font size for mobile */
+    }
+    
+    .head::after {
+        width: 100px; /* Smaller underline for mobile */
+        height: 3px;
+        margin-bottom: 20px; /* Reduce space between heading and underline */
+    }
+
+    .container {
+        width: 60%; /* Full width for mobile */
+    }
+
+    .container ul li .title{
+        font-size: 17px;
+        color: turquoise;
+    }
+    
+    ul li p{
+        font-size: 13px;
+        margin: 7px 0;
+        line-height: 30px;
+    }
+
+    .one, 
+    .three{
+        text-align: left;
+    }
+
+
+    .container ul::after {
+        left: -10px; /* Adjust for a smaller view */ /*left: -30px;*/
+    }
+
+    .container ul li {
+        width: 100%; /* Each list item takes full width on mobile */
+        float: none; /* Remove float */
+        clear: both; /* Clear float */
+        margin-bottom: 80px; /* Adjust spacing for better readability */
+    }
+
+    .container ul li:nth-child(odd) {
+        transform: translateX(0); /* Remove translation on both even and odd items */
+        text-align: left; /* Align text to left for all items */
+    }
+
+    .container ul li:nth-child(odd) .dateOne,
+    .container ul li:nth-child(odd) .dateThree {
+        left: 2px; /* Align date to the left */
+    }
+
+    .container ul li .circle {
+        left: -60px; /* Adjust circle positioning */
+        transform: translate(-50%, -50%); /* Center the circle */
+    }
+
+    .container ul li:nth-child(even){
+        transform:translateX(0);
+    }
+
+/*******************************************************PROJECT SECTION OF MOBILE RESPONSIVE VIEW*****************************************************/
+
+    #project-section {
+        padding: 20px 20px; /* Adjust padding for mobile screens */
+        background-color: black;
+        color: white;
+        margin-bottom: 860%;
+    }
+
+    .outer-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-container {
+        flex-direction: column; /* Stack content vertically on mobile */
+        width: 100%;
+        align-items: center;
+    }
+
+    .project-content {
+        padding: 20px; /* Reduce padding for mobile */
+    }
+
+    .project-content h1 {
+        font-size: 24px; /* Adjust heading size for mobile */
+    }
+
+    .project-content h2, p, ul, li{
+        text-align: justify;
+    }
+
+    .project-content h2 {
+        font-size: 20px; /* Adjust subheading size */
+    }
+
+    .horizontal-line {
+        height: 1px; /* Thinner line */
+        margin: 15px 0; /* Adjust margin for mobile */
+    }
+
+    .project-content p, ul, li {
+        font-size: 16px; /* Decrease font size */
+    }
+
+    ul {
+        padding-left: 20px; /* Add padding to lists for better readability */
+    }
+
+    video {
+        width: 100%; /* Full-width video */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 30px;
+    }
+
+    .spacer {
+        height: 30px; /* Reduce the spacer height */
+    }
+
+    /* Ensure the close button for the menu stays visible */
+    .closeMenu {
+        display: block;
+    }
+/*******************************************************CONTACT SECTION OF MOBILE RESPONSIVE VIEW*****************************************************/  
+
+    .contact {
+        margin-top: 80px;
+        padding: 20px 50px;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact .contactInfo {
+        width: 100%;
+        padding-bottom: 20px; /* Add space between sections */
+    }
+
+    .contact .contactInfo .box {
+        padding: 10px 0;
+    }
+
+    .contact .contactInfo .box .icon {
+        min-width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .contact .contactInfo .box .text h3 {
+        font-size: 18px;
+    }
+
+    .contact .contactInfo .box .text p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .contactForm {
+        width: 100%; /* Take full width */
+        padding: 20px; /* Reduce padding */
+        margin-bottom: 30px;
+        box-sizing: border-box; /* Ensure padding fits within the width */
+    }
+
+    .contactForm h2 {
+        font-size: 24px; /* Reduce font size */
+    }
+
+    .contactForm .inputBox input,
+    .contactForm .inputBox textarea {
+        font-size: 14px; /* Smaller input font */
+    }
+
+    .contactForm .inputBox input[type="submit"] {
+        width: 100px; /* Reduce button width */
+        font-size: 16px; /* Smaller font for the button */
+    }
+/*******************************************************FOOTER SECTION OF MOBILE RESPONSIVE VIEW*****************************************************/  
+
+    .footer-container{
+        padding: 60px 30px 2px; /*padding : 30px(top) 30px(left and right) 2px(bottom)*/
+    }
+
+    .footer-header p{
+        font-size: 15px;
+    }
+
+    .footer-icons a i{
+        font-size: 15px;
+    }
+
+    .footer-bottom p{
+        font-size: 14px;
+    }
+}
+
+    
+
+
+
+    
+
+
+
+
+
+    
+
+    
+
+
+
+
+

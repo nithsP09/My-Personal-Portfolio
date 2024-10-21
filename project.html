@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-bar">
+                <li class="logo">
+                    Nithya <span> Parvathy</span>
+                </li>
+                <input type="checkbox" id="project-check">
+                <span class="menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="project.html">PROJECT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <label for="project-check" class="close-menu"><i class="fas fa-times"></i></label>
+                </span>
+                <label for="project-check" class="open-menu"><i class="fas fa-bars"></i></label>
+            </ul>
+        </nav>
+    </header>
+<!--------------------------------------------------------Project Section---------------------------------------------------------------------->
+    <section id="project-section">
+        <div class="outer-box">
+            <div class="project-container">
+                <div class="project-header">
+                    <div class="project-content">
+                        <h1>Qafox Automation Project</h1>
+                        <div class="horizontal-line"></div>
+                        <h2>Project Overview</h2>
+                        <p>This project automates the testing of various functionalities on a demo e-commerce website using Selenium WebDriver, TestNG, and Maven. The tests include scenarios such as account login, address management, product search, adding products to the cart, wishlist management, product comparison, and order checkout.</p>
+                        <h2>Tools and Technologies</h2>
+                        <ul>
+                            <li>
+                                <p><span>Java</span>: Programming language for writing the test scripts.</p>
+                            </li> 
+                            <li>
+                                <p><span>Selenium WebDriver</span>: For automating the browser interactions.</p>
+                            </li> 
+                            <li>
+                                <p><span>TestNG</span>: Framework for organizing and running the test cases.</p>
+                            </li>
+                            <li>
+                                <p><span>Maven</span>: Build automation tool, used to manage dependencies and run the project.</p>
+                            </li>
+                            <li>
+                                <p><span>ChromeDriver</span>: WebDriver used for running the tests on Chrome browser.</p>
+                            </li>
+                        </ul>  
+                        <h2>Project Structure</h2>
+                        <ul>
+                            <li>
+                                <p><span>Account_Page.java</span>: Contains methods to automate login and account-related actions.</p>
+                            </li>
+                            <li>
+                                <p><span>Address_Page.java</span>: Handles the addition and modification of user addresses.</p>
+                            </li>
+                            <li>
+                                <p><span>Search_Page.java</span>: Automates the product search functionality.</p>
+                            </li>
+                            <li>
+                                <p><span>Product_Page_One.java</span>: Automates adding various products to the cart from different product categories.</p>
+                            </li>
+                            <li>
+                                <p><span>Product_Page_Two.java</span>: Automates adding various products to the cart from different product categories.</p>
+                            </li>
+                            <li>
+                                <p><span>Product_Page_Three.java</span>: Automates adding various products to the cart from different product categories.</p>
+                            </li>
+                            <li>
+                                <p><span>WishList_Page.java</span>: Automates the process of adding products to the wishlist.</p>
+                            </li>
+                            <li>
+                                <p><span>Compare_Page.java</span>: Automates product comparison features.</p>
+                            </li>
+                            <li>
+                                <p><span>Cart_Page.java</span>: Handles cart-related actions such as updating product quantities and proceeding to checkout.</p>
+                            </li>
+                            <li>
+                                <p><span>CheckOut_Page.java</span>: Automates the final checkout process, including entering billing and shipping details.</p>
+                            </li>
+                        </ul>
+                        <h2>Test Cases</h2>
+                        <ul>
+                            <li>
+                                <p><span>AccountPage</span>: Automates login and account verification.</p>
+                            </li>
+                            <li>
+                                <p><span>AddressPage</span>: Automates adding a new address to the user's account.</p>
+                            </li>
+                            <li>
+                                <p><span>SearchPage</span>: Automates searching for products like iPhone.</p>
+                            </li>
+                            <li>
+                                <p><span>ProductPageOne</span>: Automates selecting a product and adding it to the cart.</p>
+                            </li>
+                            <li>
+                                <p><span>ProductPageTwo</span>: Automates adding another product to the cart.</p>
+                            </li>
+                            <li>
+                                <p><span>ProductPageThree</span>: Automates the process of adding laptops to the cart.</p>
+                            </li>
+                            <li>
+                                <p><span>WishListPage</span>: Automates adding cameras and tablets to the Wishlist.</p>
+                            </li>
+                            <li>
+                                <p><span>ComparePage</span>: Automates comparing phones and adding one phone product to the cart.</p>
+                            </li>
+                            <li>
+                                <p><span>CartPage</span>: Automates actions within the shopping cart, such as updating the product quantity and proceeding with shipping and taxes.</p>
+                            </li>
+                            <li>
+                                <p><span>CheckOutPage</span>: Completes the checkout process, including order confirmation.</p>
+                            </li>
+                        </ul>
+                        <h2>Prerequisites</h2>
+                        <ul>
+                            <li>
+                                <p><span>Java JDK 8+</span>: Required to run the project.</p>
+                            </li>
+                            <li>
+                                <p><span>Maven</span>: To manage project dependencies and run tests.</p>
+                            </li>
+                            <li>
+                                <p><span>ChromeDriver</span>: Make sure to download and place the correct version of chromedriver.exe in your system's PATH or provide the path in the code.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <video controls src="Qafox Automation Demo Video.mp4" width="1200"></video>
+        <div class="spacer"></div> 
+    </section>  
+
+<!--------------------------------------------------------Footer Section---------------------------------------------------------------------->
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-header">
+            <p>FOLLOW ME</p>
+        </div>
+        <div class="footer-icons">
+            <a href="https://in.pinterest.com/nithyaparvathydr/"><i class="fa-brands fa-pinterest"></i></a>
+            <!--<a href="https://www.threads.net/@nithya.p._13?xmt=AQGz5CJdW3M-Zo58APsNcRGs9nEoTu_B193uTGrmSgyClac"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/nithya.p._13/"><i class="fa-brands fa-instagram"></i></a>-->
+        </div>
+        <div class="footer-bottom">
+            <p>Made with <i class="fa-solid fa-heart"></i> by <span>Nithya Parvathy</span></p>
+        </div>
+    </div>
+</footer>
+
+<!--------------------------------------------------------Script Section---------------------------------------------------------------------->
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/lugolabs/circles/circles.min.js"></script>
+</body>
+</html>
